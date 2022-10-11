@@ -838,7 +838,7 @@ input[type="checkbox"]:checked::before{
                                     <ul class="list-inline pull-right">
                                         <!-- <li><button type="button" class="default-btn prev-step"></button></li> -->
                                         <!-- <li><button type="button" class="default-btn next-step skip-btn">Skip</button></li> -->
-                                        <li><button type="button" id="close" class="default-btn next-step">Close</button></li>
+                                        <li><button type="button" onclick="closez()" class="default-btn next-step">Close</button></li>
                                     </ul>
                                 </div>
                                 <div class="clearfix"></div>
@@ -853,10 +853,9 @@ input[type="checkbox"]:checked::before{
 
     <script type="text/javascript">
 
-jQuery('#close').on('click', function() {
-    $("body").css("display", "none");
-    $(location).attr('href', 'https://google.com');
-});
+function closez(){
+    location.href="https://google.com";
+}
         // ------------step-wizard-------------
 jQuery(document).ready(function () {
     $('.nav-tabs > li a[title]').tooltip();
